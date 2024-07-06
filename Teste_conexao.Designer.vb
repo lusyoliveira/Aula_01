@@ -44,7 +44,7 @@ Partial Class Teste_conexao
         'dgvClientes
         '
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Location = New System.Drawing.Point(29, 239)
+        Me.dgvClientes.Location = New System.Drawing.Point(29, 133)
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.Size = New System.Drawing.Size(594, 150)
         Me.dgvClientes.TabIndex = 1
@@ -158,7 +158,7 @@ Partial Class Teste_conexao
         '
         'txtlinhas
         '
-        Me.txtlinhas.Location = New System.Drawing.Point(38, 213)
+        Me.txtlinhas.Location = New System.Drawing.Point(29, 72)
         Me.txtlinhas.Name = "txtlinhas"
         Me.txtlinhas.Size = New System.Drawing.Size(100, 20)
         Me.txtlinhas.TabIndex = 30

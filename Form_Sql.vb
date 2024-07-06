@@ -11,9 +11,10 @@ Public Class Form_Sql
     Dim tipo As New Tipo
 
     Private con As SqlConnection
-    Private strCon As String = "Data Source=TOMAS_EDSON-PC;Initial Catalog=Aula_01;User Id=Souobom;Password=123456"
+    Private strCon As String = "Data Source=CASA2\SQLEXPRESS;Initial Catalog=dbAula01;User Id=sa;Password=123456;Integrated Security=True"
     Private adpt As SqlDataAdapter
     Private tabela As DataTable
+
 
     Dim Banco As New Conexao_sql
 
@@ -22,13 +23,8 @@ Public Class Form_Sql
         CarregaBox()
 
     End Sub
-
-
     Public Sub CarregaBox()
-
-
         Try
-
             Dim campo As DataTable = New DataTable
 
             ds = tipo.ConsultarTipo()
@@ -78,11 +74,6 @@ Public Class Form_Sql
         Return True
     End Function
 
-    Private Sub ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtTipo.SelectedIndexChanged
-
-    End Sub
-
-
     Private Sub btnConectar_Click(sender As Object, e As EventArgs) Handles btnConectar.Click
 
         Banco.Conectar()
@@ -127,9 +118,6 @@ Public Class Form_Sql
         Catch ex As Exception
             MsgBox("Não foi possível salvar as informações no bacnco de dados!", MsgBoxStyle.Critical, "ERRO")
         End Try
-
-      
-
 
 
     End Sub

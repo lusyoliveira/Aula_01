@@ -1,10 +1,10 @@
-﻿Public NotInheritable Class SplashScreen2
+﻿Public NotInheritable Class spTelaInicial
 
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
     '  of the Project Designer ("Properties" under the "Project" menu).
 
 
-    Private Sub SplashScreen2_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'Set up the dialog text at runtime according to the application's assembly information.  
 
         'TODO: Customize the application's assembly information in the "Application" pane of the project 
@@ -32,51 +32,4 @@
         Copyright.Text = My.Application.Info.Copyright
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
-        If ProgressBar1.Value < 100 Then
-
-            ProgressBar1.Value += 2
-
-            If ProgressBar1.Value = 10 Then
-                lblPro.Text = "Carregando 10%...."
-            End If
-
-            If ProgressBar1.Value = 20 Then
-                lblPro.Text = "Carregando 20%...."
-            End If
-            If ProgressBar1.Value = 30 Then
-                lblPro.Text = "Carregando 30%...."
-            End If
-            If ProgressBar1.Value = 40 Then
-                lblPro.Text = "Carregando 40%...."
-            End If
-            If ProgressBar1.Value = 50 Then
-                lblPro.Text = "Carregando 50%...."
-            End If
-            If ProgressBar1.Value = 60 Then
-                lblPro.Text = "Carregando 60%...."
-            End If
-            If ProgressBar1.Value = 70 Then
-                lblPro.Text = "Carregando 70%...."
-            End If
-            If ProgressBar1.Value = 80 Then
-                lblPro.Text = "Carregando 80%...."
-            End If
-            If ProgressBar1.Value = 90 Then
-                lblPro.Text = "Carregando 90%...."
-            End If
-            If ProgressBar1.Value = 100 Then
-                lblPro.Text = "Carregando 100%...."
-            End If
-        Else
-            Timer1.Enabled = False
-            Form_Login.Show()
-            Me.Hide()
-        End If
-
-
-
-
-    End Sub
 End Class

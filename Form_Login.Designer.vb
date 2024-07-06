@@ -33,14 +33,14 @@ Partial Class Form_Login
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(24, 68)
+        Me.txtUsuario.Location = New System.Drawing.Point(88, 88)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
         Me.txtUsuario.TabIndex = 0
         '
         'txtSenha
         '
-        Me.txtSenha.Location = New System.Drawing.Point(152, 68)
+        Me.txtSenha.Location = New System.Drawing.Point(216, 88)
         Me.txtSenha.Name = "txtSenha"
         Me.txtSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtSenha.Size = New System.Drawing.Size(100, 20)
@@ -49,7 +49,7 @@ Partial Class Form_Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(21, 52)
+        Me.Label1.Location = New System.Drawing.Point(85, 72)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 2
@@ -58,7 +58,7 @@ Partial Class Form_Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(149, 52)
+        Me.Label2.Location = New System.Drawing.Point(213, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 3
@@ -66,7 +66,7 @@ Partial Class Form_Login
         '
         'btnEntrar
         '
-        Me.btnEntrar.Location = New System.Drawing.Point(24, 94)
+        Me.btnEntrar.Location = New System.Drawing.Point(88, 114)
         Me.btnEntrar.Name = "btnEntrar"
         Me.btnEntrar.Size = New System.Drawing.Size(75, 23)
         Me.btnEntrar.TabIndex = 4
@@ -75,7 +75,7 @@ Partial Class Form_Login
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(152, 94)
+        Me.Button2.Location = New System.Drawing.Point(216, 114)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 5
@@ -84,7 +84,7 @@ Partial Class Form_Login
         '
         'btnConsulta
         '
-        Me.btnConsulta.Location = New System.Drawing.Point(90, 144)
+        Me.btnConsulta.Location = New System.Drawing.Point(154, 164)
         Me.btnConsulta.Name = "btnConsulta"
         Me.btnConsulta.Size = New System.Drawing.Size(75, 23)
         Me.btnConsulta.TabIndex = 6
@@ -95,7 +95,7 @@ Partial Class Form_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 282)
+        Me.ClientSize = New System.Drawing.Size(406, 272)
         Me.Controls.Add(Me.btnConsulta)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnEntrar)

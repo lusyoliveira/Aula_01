@@ -59,7 +59,7 @@ Partial Class Form_Sql
         '
         'btnConectar
         '
-        Me.btnConectar.Location = New System.Drawing.Point(614, 308)
+        Me.btnConectar.Location = New System.Drawing.Point(261, 105)
         Me.btnConectar.Name = "btnConectar"
         Me.btnConectar.Size = New System.Drawing.Size(75, 23)
         Me.btnConectar.TabIndex = 2
