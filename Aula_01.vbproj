@@ -79,46 +79,38 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Cliente.vb" />
     <Compile Include="Classes\Clientes.vb" />
-    <Compile Include="Classes\Conexao.vb" />
+    <Compile Include="Classes\ConexaoMySql.vb" />
     <Compile Include="Classes\Conexao_sql.vb" />
-    <Compile Include="Classes\Conexao_sql_server.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="frmProdutos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmProdutos.Designer.vb">
+      <DependentUpon>frmProdutos.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormData.Designer.vb">
-      <DependentUpon>FormData.vb</DependentUpon>
+    <Compile Include="frmConsultaParcelas.Designer.vb">
+      <DependentUpon>frmConsultaParcelas.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormData.vb">
+    <Compile Include="frmConsultaParcelas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.vb">
-      <DependentUpon>Form_Login.vb</DependentUpon>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.vb">
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Menu.Designer.vb">
-      <DependentUpon>Form_Menu.vb</DependentUpon>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_Menu.vb">
+    <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Progresso.Designer.vb">
-      <DependentUpon>Form_Progresso.vb</DependentUpon>
+    <Compile Include="frmTabuada.Designer.vb">
+      <DependentUpon>frmTabuada.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_Progresso.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Sql.Designer.vb">
-      <DependentUpon>Form_Sql.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Sql.vb">
+    <Compile Include="frmTabuada.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Login.vb" />
@@ -126,6 +118,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -137,10 +130,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Navega_dados.Designer.vb">
-      <DependentUpon>Navega_dados.vb</DependentUpon>
+    <Compile Include="frmNavegar.Designer.vb">
+      <DependentUpon>frmNavegar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Navega_dados.vb">
+    <Compile Include="frmNavegar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Parcelas.vb" />
@@ -151,33 +144,30 @@
     <Compile Include="spTelaInicial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Teste_conexao.Designer.vb">
-      <DependentUpon>Teste_conexao.vb</DependentUpon>
+    <Compile Include="frmTestaConexao.Designer.vb">
+      <DependentUpon>frmTestaConexao.vb</DependentUpon>
     </Compile>
-    <Compile Include="Teste_conexao.vb">
+    <Compile Include="frmTestaConexao.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Tipo.vb" />
     <Compile Include="Classes\Utils.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmProdutos.resx">
+      <DependentUpon>frmProdutos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormData.resx">
-      <DependentUpon>FormData.vb</DependentUpon>
+    <EmbeddedResource Include="frmConsultaParcelas.resx">
+      <DependentUpon>frmConsultaParcelas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
-      <DependentUpon>Form_Login.vb</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Menu.resx">
-      <DependentUpon>Form_Menu.vb</DependentUpon>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Progresso.resx">
-      <DependentUpon>Form_Progresso.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Sql.resx">
-      <DependentUpon>Form_Sql.vb</DependentUpon>
+    <EmbeddedResource Include="frmTabuada.resx">
+      <DependentUpon>frmTabuada.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -185,14 +175,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Navega_dados.resx">
-      <DependentUpon>Navega_dados.vb</DependentUpon>
+    <EmbeddedResource Include="frmNavegar.resx">
+      <DependentUpon>frmNavegar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="spTelaInicial.resx">
       <DependentUpon>spTelaInicial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Teste_conexao.resx">
-      <DependentUpon>Teste_conexao.vb</DependentUpon>
+    <EmbeddedResource Include="frmTestaConexao.resx">
+      <DependentUpon>frmTestaConexao.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

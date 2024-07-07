@@ -2,7 +2,7 @@
 
     Dim sql As String
     Dim ds As New DataSet
-    Dim con As New Conexao_sql_server
+    Dim con As New Conexao_sql
 
     Private log_id_ As Integer
     Public Property log_id() As Integer
@@ -68,32 +68,24 @@
     End Property
 
 
-
     Public Sub CadastrarCliente()
 
-        sql = "Insert Into Cliente(log_nome,log_usuario,log_senha, log_cargo, log_tipo)values('" & log_nome & "','" & log_usuario & "','" & log_senha & "','" & log_cargo & "'," & log_tipo & " )"
+        sql = "Insert Into tbCliente(log_nome,log_usuario,log_senha, log_cargo, log_tipo)values('" & log_nome & "','" & log_usuario & "','" & log_senha & "','" & log_cargo & "'," & log_tipo & " )"
         con.Operar(sql)
 
     End Sub
 
     Public Sub ExcluirCliente()
 
-        sql = "Delete from Cliente Where log_id= " & log_id & ""
+        sql = "Delete from tbCliente Where log_id= " & log_id & ""
         con.Operar(sql)
 
     End Sub
+    Public Function ConsultarCliente()
 
-
-
-    Public Function CosultarClientes()
-
-        sql = "Select * From Cliente"
-        ds = con.Listar(sql)
-
+        sql = "Select * from tbCliente"
+        ds = con.listar(sql)
         Return ds
+
     End Function
-
-
-
-
 End Class

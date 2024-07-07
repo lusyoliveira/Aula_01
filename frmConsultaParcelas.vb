@@ -1,23 +1,16 @@
-﻿Public Class FormData
+﻿Public Class frmConsultaParcelas
     Dim sql As String
     Dim ds As New DataSet
-    Dim con As New Conexao
-
+    Dim con As New ConexaoMySql
     Dim parcel As New Parcelas
 
-    Private Sub FormData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Consultar_Click(sender As Object, e As EventArgs) Handles Consultar.Click
+    Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
 
         Dim ano, mes, dia As Integer
         Dim dr1, dr2 As Date
         Dim dinicio, dfim As String
         'Dim Parcela As String
 
-
-      
         dr1 = txtInicio.Text
         dia = dr1.Day
         mes = dr1.Month
@@ -30,16 +23,11 @@
         ano = dr2.Year
         dfim = ano & "-" & mes & "-" & dia
 
-
-
-                Try
+        Try
             ds = parcel.ConsularDatas(dinicio, dfim)
             dgvData.DataSource = ds.Tables(0)
-
-                Catch ex As Exception
-                    MsgBox("ERRO ao consultar!", MsgBoxStyle.Critical, "ERRO")
-                End Try
-
-
+        Catch ex As Exception
+            MessageBox.Show("ERRO ao consultar!" & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

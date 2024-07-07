@@ -1,10 +1,8 @@
-﻿Public Class Teste_conexao
+﻿Public Class frmTestaConexao
 
     Dim ds As New DataSet
-    Dim abobora As New Conexao_sql_server
-
+    Dim Banco As New Conexao_sql
     Dim cliente As New Clientes
-
     Dim tipo As New Tipo
 
     Public Sub Contalinhas()
@@ -22,52 +20,33 @@
 
     End Sub
 
-
     Public Sub preenchegrid()
-
-        ' abobora.Conectar()
+        Banco.Conectar()
         Dim tabela As DataTable
-
-        ds = cliente.CosultarClientes()
+        ds = cliente.ConsultarCliente()
         tabela = ds.Tables(0)
-
         If tabela.Rows.Count > 0 Then
-
             dgvClientes.DataSource = ds.Tables(0)
             Formatagrid()
             Contalinhas()
-
         End If
-
-
     End Sub
 
     Public Sub CarregaBox()
-
-
         Try
-
             Dim campo As DataTable = New DataTable
-
             ds = tipo.ConsultarTipo()
             campo = ds.Tables(0)
-
             If campo.Rows.Count > 0 Then
-
-                txtTipo.ValueMember = "tip_id"
-                txtTipo.DisplayMember = "tip_nome"
-
+                txtTipo.ValueMember = "Codigo"
+                txtTipo.DisplayMember = "Tipo"
                 txtTipo.DataSource = campo
-
             End If
-
-
         Catch ex As Exception
-            MsgBox("Erro ao preencher Combobox", MsgBoxStyle.Critical, "ERRO")
+            MessageBox.Show("Não foi possível scarregar o combos!" & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
-
     Public Sub Formatagrid()
         With dgvClientes
             .Columns(0).HeaderText = "Código"
@@ -97,28 +76,20 @@
             cliente.log_senha = txtSenha.Text
             cliente.log_cargo = txtCargo.Text
 
-            If txtTipo.Text = "administrador" Then
+            If txtTipo.Text = "admin" Then
                 cliente.log_tipo = 1
             Else
                 cliente.log_tipo = 1
             End If
 
             cliente.CadastrarCliente()
-            MsgBox("As informações foram gravadas com sucesso", MsgBoxStyle.Information, "Sucesso")
-
+            MessageBox.Show("Cadastro realizado com sucesso", "Resposta", MessageBoxButtons.OK, MessageBoxIcon.Information)
             preenchegrid()
-
-
         Catch ex As Exception
-            MsgBox("Não foi possível gravar as informações no banco", MsgBoxStyle.Critical, "Erro")
+            MessageBox.Show("Não foi possível salvar as informações no banco de dados!" & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
-
-    Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
-
-    End Sub
-
     Private Sub dgvClientes_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentDoubleClick
         txtCodigo.Text = dgvClientes.CurrentRow.Cells(0).Value
         txtNome.Text = dgvClientes.CurrentRow.Cells(1).Value
@@ -129,23 +100,16 @@
     End Sub
 
     Private Sub btnExcluir_Click(sender As Object, e As EventArgs) Handles btnExcluir.Click
-
         Try
 
             If MsgBox("Deseja realmente excluir?", MsgBoxStyle.YesNo, "Confrmação") = MsgBoxResult.Yes Then
-
-
                 cliente.log_id = dgvClientes.CurrentRow.Cells(0).Value
                 cliente.ExcluirCliente()
-                MsgBox("Cliente excluído com sucesso", MsgBoxStyle.Information, "Sucesso")
+                MessageBox.Show("Cadastro excluído com sucesso", "Resposta", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 preenchegrid()
-
-
             End If
-
-
         Catch ex As Exception
-            MsgBox("Erro ao Excluir!", MsgBoxStyle.Critical, "ERRO")
+            MessageBox.Show("Não foi possível excluir as informações no banco de dados!" & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub

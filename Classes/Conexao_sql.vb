@@ -8,22 +8,18 @@ Public Class Conexao_sql
     Public ds As New DataSet
 
     'Variável que armazena caminho do SQLServer
-    Public strCon As String = "Data Source=TOMAS_EDSON-PC\SQLEXPRESS;Initial Catalog=Aula_01;User Id=Souobom;Password=123456"
-
-
-
+    Public strCon As String = "Data Source=CASA2\SQLEXPRESS;Initial Catalog=dbAula01;User Id=sa;Password=123456;Integrated Security=True"
     'Faz a conexão com o banco de dados
     Public Sub Conectar()
 
-
         Try
-
             con = New SqlConnection(strCon)
             con.Open()
             MsgBox("Conexão com SQL SERVER realizada com sucesso!", MsgBoxStyle.Information, "Conexão com Banco SQL Server 2012")
         Catch ex As Exception
             MsgBox(ex.Message & "Erro ao conectar")
-
+        Finally
+            con.Close()
         End Try
     End Sub
     'Grava os dados no banco de dados
@@ -37,7 +33,6 @@ Public Class Conexao_sql
             End
         End Try
 
-
         Try
             con.Open()
             cmd = New SqlCommand(sql, con)
@@ -49,11 +44,8 @@ Public Class Conexao_sql
         End Try
     End Sub
 
-
-
-
     'Faz as consultas nas tabelas do banco de dados
-     Public Function listar(ByVal sql As String)
+    Public Function listar(ByVal sql As String)
         'Faz a conexão com o banco de dados SQL
         Try
             con = New SqlConnection(strCon)

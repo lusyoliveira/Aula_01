@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form_Menu
+Partial Class frmMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,22 +23,22 @@ Partial Class Form_Menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Menu))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArquivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarraDeProgressoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NavegaDadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestaConexãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.menu = New System.Windows.Forms.ToolStripButton()
+        Me.tsProdutos = New System.Windows.Forms.ToolStripButton()
+        Me.tsConsulta = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblData = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblNivel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.NavegaDadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BancoSQLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -55,7 +55,7 @@ Partial Class Form_Menu
         '
         'ArquivoToolStripMenuItem
         '
-        Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroToolStripMenuItem, Me.BarraDeProgressoToolStripMenuItem, Me.NavegaDadosToolStripMenuItem, Me.BancoSQLToolStripMenuItem})
+        Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroToolStripMenuItem, Me.BarraDeProgressoToolStripMenuItem, Me.NavegaDadosToolStripMenuItem, Me.TestaConexãoToolStripMenuItem})
         Me.ArquivoToolStripMenuItem.Name = "ArquivoToolStripMenuItem"
         Me.ArquivoToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.ArquivoToolStripMenuItem.Text = "&Arquivo"
@@ -64,19 +64,31 @@ Partial Class Form_Menu
         '
         Me.CadastroToolStripMenuItem.Image = CType(resources.GetObject("CadastroToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CadastroToolStripMenuItem.Name = "CadastroToolStripMenuItem"
-        Me.CadastroToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.CadastroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CadastroToolStripMenuItem.Text = "Cadastro"
         '
         'BarraDeProgressoToolStripMenuItem
         '
         Me.BarraDeProgressoToolStripMenuItem.Name = "BarraDeProgressoToolStripMenuItem"
-        Me.BarraDeProgressoToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.BarraDeProgressoToolStripMenuItem.Text = "Barra de Progresso"
+        Me.BarraDeProgressoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BarraDeProgressoToolStripMenuItem.Text = "Tabuada"
+        '
+        'NavegaDadosToolStripMenuItem
+        '
+        Me.NavegaDadosToolStripMenuItem.Name = "NavegaDadosToolStripMenuItem"
+        Me.NavegaDadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NavegaDadosToolStripMenuItem.Text = "Navega Dados"
+        '
+        'TestaConexãoToolStripMenuItem
+        '
+        Me.TestaConexãoToolStripMenuItem.Name = "TestaConexãoToolStripMenuItem"
+        Me.TestaConexãoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TestaConexãoToolStripMenuItem.Text = "Testa Conexão"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.menu, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsProdutos, Me.tsConsulta, Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -84,28 +96,28 @@ Partial Class Form_Menu
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'tsProdutos
         '
-        Me.ToolStripButton1.AutoToolTip = False
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(34, 37)
-        Me.ToolStripButton1.Text = "Cadastro"
-        Me.ToolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.tsProdutos.AutoToolTip = False
+        Me.tsProdutos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsProdutos.Image = CType(resources.GetObject("tsProdutos.Image"), System.Drawing.Image)
+        Me.tsProdutos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsProdutos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsProdutos.Name = "tsProdutos"
+        Me.tsProdutos.Size = New System.Drawing.Size(34, 37)
+        Me.tsProdutos.Text = "Cadastro"
+        Me.tsProdutos.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.tsProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
-        'menu
+        'tsConsulta
         '
-        Me.menu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.menu.Image = CType(resources.GetObject("menu.Image"), System.Drawing.Image)
-        Me.menu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.menu.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.menu.Name = "menu"
-        Me.menu.Size = New System.Drawing.Size(34, 29)
-        Me.menu.Text = "ToolStripButton2"
+        Me.tsConsulta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsConsulta.Image = CType(resources.GetObject("tsConsulta.Image"), System.Drawing.Image)
+        Me.tsConsulta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsConsulta.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsConsulta.Name = "tsConsulta"
+        Me.tsConsulta.Size = New System.Drawing.Size(34, 29)
+        Me.tsConsulta.Text = "ToolStripButton2"
         '
         'ToolStripButton3
         '
@@ -149,19 +161,7 @@ Partial Class Form_Menu
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'NavegaDadosToolStripMenuItem
-        '
-        Me.NavegaDadosToolStripMenuItem.Name = "NavegaDadosToolStripMenuItem"
-        Me.NavegaDadosToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.NavegaDadosToolStripMenuItem.Text = "Navega Dados"
-        '
-        'BancoSQLToolStripMenuItem
-        '
-        Me.BancoSQLToolStripMenuItem.Name = "BancoSQLToolStripMenuItem"
-        Me.BancoSQLToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.BancoSQLToolStripMenuItem.Text = "Banco SQL"
-        '
-        'Form_Menu
+        'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -171,7 +171,7 @@ Partial Class Form_Menu
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Form_Menu"
+        Me.Name = "frmMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_Menu"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -189,8 +189,8 @@ Partial Class Form_Menu
     Friend WithEvents ArquivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CadastroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents menu As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsProdutos As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsConsulta As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents lblData As System.Windows.Forms.ToolStripStatusLabel
@@ -199,5 +199,5 @@ Partial Class Form_Menu
     Friend WithEvents lblUsuario As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblNivel As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents NavegaDadosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents BancoSQLToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TestaConexãoToolStripMenuItem As ToolStripMenuItem
 End Class

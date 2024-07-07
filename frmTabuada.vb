@@ -1,4 +1,4 @@
-﻿Public Class Form_Progresso
+﻿Public Class frmTabuada
 
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
         lbtResultado.Text = ""

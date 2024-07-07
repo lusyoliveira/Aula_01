@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Teste_conexao
+Partial Class frmTestaConexao
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -36,22 +36,23 @@ Partial Class Teste_conexao
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.txtNome = New System.Windows.Forms.TextBox()
         Me.txtTipo = New System.Windows.Forms.ComboBox()
-        Me.txtlinhas = New System.Windows.Forms.TextBox()
         Me.btnExcluir = New System.Windows.Forms.Button()
+        Me.txtlinhas = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvClientes
         '
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Location = New System.Drawing.Point(29, 133)
+        Me.dgvClientes.Location = New System.Drawing.Point(12, 128)
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.Size = New System.Drawing.Size(594, 150)
         Me.dgvClientes.TabIndex = 1
         '
         'btnGravar
         '
-        Me.btnGravar.Location = New System.Drawing.Point(173, 104)
+        Me.btnGravar.Location = New System.Drawing.Point(439, 94)
         Me.btnGravar.Name = "btnGravar"
         Me.btnGravar.Size = New System.Drawing.Size(75, 23)
         Me.btnGravar.TabIndex = 29
@@ -61,7 +62,7 @@ Partial Class Teste_conexao
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(26, 15)
+        Me.Label6.Location = New System.Drawing.Point(9, 10)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(43, 13)
         Me.Label6.TabIndex = 28
@@ -70,7 +71,7 @@ Partial Class Teste_conexao
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(526, 56)
+        Me.Label5.Location = New System.Drawing.Point(456, 51)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(31, 13)
         Me.Label5.TabIndex = 27
@@ -79,7 +80,7 @@ Partial Class Teste_conexao
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(353, 56)
+        Me.Label4.Location = New System.Drawing.Point(298, 51)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 26
@@ -88,7 +89,7 @@ Partial Class Teste_conexao
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(173, 56)
+        Me.Label3.Location = New System.Drawing.Point(118, 51)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 25
@@ -97,7 +98,7 @@ Partial Class Teste_conexao
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(511, 12)
+        Me.Label2.Location = New System.Drawing.Point(456, 7)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 24
@@ -106,7 +107,7 @@ Partial Class Teste_conexao
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(173, 10)
+        Me.Label1.Location = New System.Drawing.Point(118, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 23
@@ -114,36 +115,36 @@ Partial Class Teste_conexao
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(29, 31)
+        Me.txtCodigo.Location = New System.Drawing.Point(12, 26)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(100, 20)
         Me.txtCodigo.TabIndex = 22
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(356, 72)
+        Me.txtCargo.Location = New System.Drawing.Point(301, 67)
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(167, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(152, 20)
         Me.txtCargo.TabIndex = 21
         '
         'txtSenha
         '
-        Me.txtSenha.Location = New System.Drawing.Point(514, 28)
+        Me.txtSenha.Location = New System.Drawing.Point(459, 23)
         Me.txtSenha.Name = "txtSenha"
         Me.txtSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
-        Me.txtSenha.Size = New System.Drawing.Size(100, 20)
+        Me.txtSenha.Size = New System.Drawing.Size(136, 20)
         Me.txtSenha.TabIndex = 20
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(173, 72)
+        Me.txtUsuario.Location = New System.Drawing.Point(118, 67)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(177, 20)
         Me.txtUsuario.TabIndex = 19
         '
         'txtNome
         '
-        Me.txtNome.Location = New System.Drawing.Point(173, 31)
+        Me.txtNome.Location = New System.Drawing.Point(118, 26)
         Me.txtNome.Name = "txtNome"
         Me.txtNome.Size = New System.Drawing.Size(335, 20)
         Me.txtNome.TabIndex = 18
@@ -151,34 +152,45 @@ Partial Class Teste_conexao
         'txtTipo
         '
         Me.txtTipo.FormattingEnabled = True
-        Me.txtTipo.Location = New System.Drawing.Point(529, 72)
+        Me.txtTipo.Location = New System.Drawing.Point(459, 67)
         Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(121, 21)
+        Me.txtTipo.Size = New System.Drawing.Size(136, 21)
         Me.txtTipo.TabIndex = 16
-        '
-        'txtlinhas
-        '
-        Me.txtlinhas.Location = New System.Drawing.Point(29, 72)
-        Me.txtlinhas.Name = "txtlinhas"
-        Me.txtlinhas.Size = New System.Drawing.Size(100, 20)
-        Me.txtlinhas.TabIndex = 30
         '
         'btnExcluir
         '
-        Me.btnExcluir.Location = New System.Drawing.Point(254, 104)
+        Me.btnExcluir.Location = New System.Drawing.Point(520, 94)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(75, 23)
         Me.btnExcluir.TabIndex = 31
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.UseVisualStyleBackColor = True
         '
-        'Teste_conexao
+        'txtlinhas
+        '
+        Me.txtlinhas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.txtlinhas.Location = New System.Drawing.Point(506, 281)
+        Me.txtlinhas.Name = "txtlinhas"
+        Me.txtlinhas.Size = New System.Drawing.Size(100, 20)
+        Me.txtlinhas.TabIndex = 32
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(436, 284)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(65, 13)
+        Me.Label7.TabIndex = 33
+        Me.Label7.Text = "Quantidade:"
+        '
+        'frmTestaConexao
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(656, 401)
-        Me.Controls.Add(Me.btnExcluir)
+        Me.ClientSize = New System.Drawing.Size(619, 322)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtlinhas)
+        Me.Controls.Add(Me.btnExcluir)
         Me.Controls.Add(Me.btnGravar)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -193,8 +205,10 @@ Partial Class Teste_conexao
         Me.Controls.Add(Me.txtNome)
         Me.Controls.Add(Me.txtTipo)
         Me.Controls.Add(Me.dgvClientes)
-        Me.Name = "Teste_conexao"
-        Me.Text = "Teste_conexao"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Name = "frmTestaConexao"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Testar Conexão"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -214,6 +228,7 @@ Partial Class Teste_conexao
     Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
     Friend WithEvents txtNome As System.Windows.Forms.TextBox
     Friend WithEvents txtTipo As System.Windows.Forms.ComboBox
-    Friend WithEvents txtlinhas As System.Windows.Forms.TextBox
     Friend WithEvents btnExcluir As System.Windows.Forms.Button
+    Friend WithEvents txtlinhas As Label
+    Friend WithEvents Label7 As Label
 End Class

@@ -2,7 +2,7 @@
 
     Dim sql As String
     Dim ds As New DataSet
-    Dim con As New Conexao
+    Dim con As New Conexao_sql
 
 
     Private cod_parcela_ As Integer
@@ -48,13 +48,13 @@
 
     Public Sub CadastrarParcela()
 
-        Sql = "Insert Into parcelas(parcela,data_parcela,valor_parcela)values(" & parcela & ",'" & data_parcela & "','" & valor_parcela & "' )"
+        sql = "Insert Into tbParcelas(parcela,data_parcela,valor_parcela)values(" & parcela & ",'" & data_parcela & "','" & valor_parcela & "' )"
         con.Operar(Sql)
 
     End Sub
     'Consulta as parcelas entre as datas
     Public Function ConsularDatas(ByVal datainicio As String, ByVal datafim As String)
-        sql = "Select * from parcelas where data_parcela between '" & datainicio & "' and '" & datafim & "'"
+        sql = "Select * from tbParcelas where data_parcela between '" & datainicio & "' and '" & datafim & "'"
         ds = con.listar(sql)
         Return ds
     End Function

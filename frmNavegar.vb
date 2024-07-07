@@ -1,8 +1,8 @@
-﻿Public Class Navega_dados
+﻿Public Class frmNavegar
 
     Dim sql As String
     Dim ds As New DataSet
-    Dim con As New Conexao
+    Dim con As New ConexaoMySql
 
     Dim i As Integer = 0
 

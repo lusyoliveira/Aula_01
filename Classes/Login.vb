@@ -1,8 +1,10 @@
-﻿Public Class Login
+﻿Imports System.Data.SqlClient
+
+Public Class Login
 
     Dim sql As String
     Dim ds As New DataSet
-    Dim con As New Conexao
+    Dim con As New Conexao_sql
 
     Private cod_login_ As Integer
     Public Property cod_login() As Integer
@@ -45,11 +47,9 @@
     End Property
 
 
-    Public Function ConsularUsuario()
-        sql = "Select * from login where usuario='" & usuario & "' and senha='" & senha & "'"
+    Public Function ConsultarUsuario()
+        sql = "Select * from tblogin where usuario='" & usuario & "' and senha='" & senha & "'"
         ds = con.listar(sql)
         Return ds
     End Function
-
-
 End Class

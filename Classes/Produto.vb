@@ -2,7 +2,7 @@
 
     Dim sql As String
     Dim ds As New DataSet
-    Dim con As New Conexao
+    Dim con As New Conexao_sql
 
     Private cod_produto_ As Integer
     Public Property cod_produto() As Integer
@@ -36,20 +36,20 @@
 
     Public Sub CadastrarValor()
 
-        sql = "Insert Into produto(produto,valor)values('" & produto & "','" & valor & "' )"
+        sql = "Insert Into tbProdutos(produto,valor)values('" & produto & "','" & valor & "' )"
         con.Operar(sql)
 
     End Sub
 
     Public Function ConsularValor()
-        sql = "Select * from produto"
+        sql = "Select * from tbProdutos"
         ds = con.listar(sql)
         Return ds
     End Function
 
     'Consultar todos os itens por ordem alfabética
     Public Function consultaAlfabetica()
-        sql = "select * from produto order by produto asc"
+        sql = "select * from tbProdutos order by produto asc"
         ds = con.listar(sql)
         Return ds
 
